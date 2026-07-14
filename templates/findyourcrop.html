@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Find your crop{% endblock %}
+{% block content %}
+
+<section class="section" style="padding-bottom:0;">
+  <p class="eyebrow">Crop recommendation</p>
+  <h1 style="font-size:36px;">Find your crop</h1>
+  <p class="lede">Enter your soil test results and local climate conditions below. OptiCrop's model will recommend the crop most likely to give you the best yield.</p>
+</section>
+
+<div class="form-wrap">
+  <form class="form-card" method="POST" action="{{ url_for('findyourcrop') }}">
+    {% if prediction and info is none %}
+      <div class="error-banner">{{ prediction }}</div>
+    {% endif %}
+    <div class="field-grid">
+      <div class="field">
+        <label for="nitrogen">Nitrogen (N)</label>
+        <input type="number" step="any" id="nitrogen" name="nitrogen" placeholder="e.g. 90" required value="{{ form_values.nitrogen if form_values }}">
+        <span class="hint">kg per hectare</span>
+      </div>
+      <div class="field">
+        <label for="phosphorous">Phosphorous (P)</label>
+        <input type="number" step="any" id="phosphorous" name="phosphorous" placeholder="e.g. 42" required value="{{ form_values.phosphorous if form_values }}">
+        <span class="hint">kg per hectare</span>
+      </div>
+      <div class="field">
+        <label for="potassium">Potassium (K)</label>
+        <input type="number" step="any" id="potassium" name="potassium" placeholder="e.g. 43" required value="{{ form_values.potassium if form_values }}">
+        <span class="hint">kg per hectare</span>
+      </div>
+      <div class="field">
+        <label for="temperature">Temperature</label>
+        <input type="number" step="any" id="temperature" name="temperature" placeholder="e.g. 20.9" required value="{{ form_values.temperature if form_values }}">
+        <span class="hint">degrees Celsius</span>
+      </div>
+      <div class="field">
+        <label for="humidity">Humidity</label>
+        <input type="number" step="any" id="humidity" name="humidity" placeholder="e.g. 82" required value="{{ form_values.humidity if form_values }}">
+        <span class="hint">relative %</span>
+      </div>
+      <div class="field">
+        <label for="ph">Soil pH</label>
+        <input type="number" step="any" id="ph" name="ph" placeholder="e.g. 6.5" required value="{{ form_values.ph if form_values }}">
+        <span class="hint">0 to 14 scale</span>
+      </div>
+      <div class="field" style="grid-column: span 2;">
+        <label for="rainfall">Rainfall</label>
+        <input type="number" step="any" id="rainfall" name="rainfall" placeholder="e.g. 202.9" required value="{{ form_values.rainfall if form_values }}">
+        <span class="hint">millimetres</span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Recommend a crop</button>
+  </form>
+
+  {% if prediction and info %}
+  <div class="result-card">
+    <p class="eyebrow">Recommended crop</p>
+    <h2>{{ prediction }}</h2>
+    <p>{{ info }}</p>
+  </div>
+  {% else %}
+  <div class="result-empty">
+    <p class="eyebrow">Recommended crop</p>
+    <h3>Your result will appear here</h3>
+    <p>Fill in the seven fields and submit the form to get an instant crop recommendation from the trained model.</p>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}

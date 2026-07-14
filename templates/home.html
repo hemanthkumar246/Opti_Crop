@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-copy">
+        <p class="eyebrow">
+            Smart Agricultural Production Optimization Engine
+        </p>
+
+        <h1>
+            Grow the right crop, in the right soil, at the right time.
+        </h1>
+
+        <p class="lede">
+            OptiCrop analyzes your soil's Nitrogen (N), Phosphorus (P), Potassium (K),
+            temperature, humidity, pH, and rainfall using a Machine Learning model
+            trained on real agricultural datasets to recommend the crop that is most
+            suitable for maximum productivity.
+        </p>
+
+        <div class="actions">
+            <a href="{{ url_for('findyourcrop') }}" class="btn btn-primary">
+                Find Your Crop
+            </a>
+
+            <a href="{{ url_for('about') }}" class="btn btn-outline">
+                Learn More
+            </a>
+        </div>
+    </div>
+
+    <div class="soil-graphic" aria-hidden="true">
+        <div class="sun"></div>
+
+        <div class="row-line" style="top:38%;"></div>
+        <div class="row-line" style="top:62%;"></div>
+
+        <div class="sprout" style="left:30%; height:70px;"></div>
+        <div class="sprout" style="left:52%; height:100px;"></div>
+        <div class="sprout" style="left:74%; height:55px;"></div>
+
+        <div class="leaf" style="left:22%; bottom:calc(62% + 60px); transform:rotate(-25deg);"></div>
+        <div class="leaf" style="left:44%; bottom:calc(62% + 90px); transform:rotate(20deg);"></div>
+        <div class="leaf" style="left:66%; bottom:calc(62% + 45px); transform:rotate(-15deg);"></div>
+    </div>
+</section>
+
+<!-- Statistics -->
+
+<section class="stat-row">
+
+    <div class="stat">
+        <div class="num">22</div>
+        <div class="label">Crop Types Supported</div>
+    </div>
+
+    <div class="stat">
+        <div class="num">7</div>
+        <div class="label">Soil & Climate Parameters</div>
+    </div>
+
+    <div class="stat">
+        <div class="num">98%</div>
+        <div class="label">Model Test Accuracy</div>
+    </div>
+
+</section>
+
+<!-- Features -->
+
+<section class="section">
+
+    <p class="eyebrow">What OptiCrop Does</p>
+
+    <h2>One System, Three Powerful Features</h2>
+
+    <div class="grid-3">
+
+        <div class="card">
+            <div class="icon">1</div>
+
+            <h3>Crop Recommendation</h3>
+
+            <p>
+                Enter your soil nutrient values and environmental conditions to receive
+                the most suitable crop recommendation for higher productivity and better
+                farming decisions.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">2</div>
+
+            <h3>Crop Suitability Analysis</h3>
+
+            <p>
+                Already selected a crop? Compare your current field conditions with the
+                ideal requirements to determine whether it is suitable for cultivation.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">3</div>
+
+            <h3>Research & Planning</h3>
+
+            <p>
+                Agricultural researchers, students, and policymakers can use OptiCrop
+                to study crop-environment relationships and promote sustainable farming.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer-credit">
+
+    <hr>
+
+    <h3>OptiCrop</h3>
+
+    <p>
+        Smart Agricultural Production Optimization using Machine Learning.
+    </p>
+
+    <p>
+        <strong>Developed By</strong><br>
+        K. Hemanth Kumar
+    </p>
+
+    <p>
+        <strong>Institution</strong><br>
+        Anantha Lakshmi Institute of Technology and Sciences
+    </p>
+
+    <p>
+        © 2026 OptiCrop. All Rights Reserved.
+    </p>
+
+</footer>
+
+{% endblock %}

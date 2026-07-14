@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+<section class="section" style="padding-bottom:0;">
+  <p class="eyebrow">About the project</p>
+  <h1 style="font-size:36px;">Opti Crop Agricultural Optimisation</h1>
+  <p class="lede">The main purpose of OptiCrop is to develop an advanced software system that utilizes data-driven insights to optimize agricultural production for different crops, so farmers spend less on trial and error and more on growing.</p>
+</section>
+
+<section class="section">
+  <h2>Why it matters</h2>
+  <p>Farmers often struggle to determine the most suitable crop based on soil nutrients and climate conditions, which can lead to financial losses and reduced yield. OptiCrop integrates Nitrogen (N), Phosphorous (P) and Potassium (K) levels with temperature, humidity, pH and rainfall to recommend the crop best matched to a plot of land right now &mdash; not the crop that worked somewhere else, or last year.</p>
+  <p>The same insights help agricultural researchers, policymakers and agribusinesses understand crop-environment interactions and build evidence-based, sustainable farming strategies.</p>
+</section>
+
+<section class="section">
+  <h2>How the recommendation is made</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Data collection</h3>
+      <p>A dataset of soil and climate readings across 22 crop types is cleaned, checked for missing values, and treated for outliers using the interquartile range method.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Pattern discovery</h3>
+      <p>K-Means clustering groups similar agricultural conditions together, using the elbow method to choose the right number of clusters.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Model training</h3>
+      <p>A Logistic Regression classifier is trained on the seven soil and climate features to predict the most suitable crop label.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Recommendation</h3>
+      <p>The trained model powers the Find your crop page, turning a farmer's soil test into an instant, specific crop recommendation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Built with</h2>
+  <div class="pill-list">
+    <span class="pill">Python</span>
+    <span class="pill">Pandas &amp; NumPy</span>
+    <span class="pill">scikit-learn</span>
+    <span class="pill">Matplotlib &amp; Seaborn</span>
+    <span class="pill">Flask</span>
+  </div>
+</section>
+
+{% endblock %}

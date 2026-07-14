@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}OptiCrop{% endblock %} - Smart Agricultural Production Optimization Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ url_for('home') }}" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path d="M15 27C15 27 6 22 6 13.5C6 8 9.5 4 15 3C15 3 15 13 15 27Z" fill="#3F6B35"/>
+          <path d="M15 27C15 27 24 22 24 13.5C24 8 20.5 4 15 3C15 3 15 13 15 27Z" fill="#5C8A4C"/>
+        </svg>
+      </span>
+      <span class="brand-name">OptiCrop</span>
+    </a>
+    <nav class="topnav">
+      <a class="{{ 'active' if request.endpoint == 'home' else '' }}" href="{{ url_for('home') }}">Home</a>
+      <a class="{{ 'active' if request.endpoint == 'about' else '' }}" href="{{ url_for('about') }}">About</a>
+      <a class="{{ 'active' if request.endpoint == 'findyourcrop' else '' }}" href="{{ url_for('findyourcrop') }}">Find your crop</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <p>OptiCrop &mdash; Smart Agricultural Production Optimization Engine</p>
+  <p class="footer-sub">Built with Flask and scikit-learn</p>
+</footer>
+
+</body>
+</html>

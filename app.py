@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask, render_template, request
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "model", "model.pkl")
 
 app = Flask(__name__)

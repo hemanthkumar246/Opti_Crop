@@ -17,7 +17,7 @@ The application applies **K-Means clustering** to uncover soil/climate patterns 
 
 ## Live Application Link 👇
 
-[add your deployed link here, e.g. https://opticrop.onrender.com] 🔗
+https://opti-crop-rcxf.onrender.com 🔗
 
 ---
 
@@ -377,13 +377,7 @@ http://127.0.0.1:5000
 
 ## Live Application Link 👇
 
-[add your deployed link here] 🔗
-
----
-
-## 🎥 Demo Video
-
-[add your demo video link here] 🔗
+[https://opti-crop-rcxf.onrender.com] 🔗
 
 ---
 
@@ -399,14 +393,14 @@ http://127.0.0.1:5000
 
 | Platform | Profile |
 |----------|---------|
-| 🐙 GitHub | [add your GitHub profile link] |
-| 💼 LinkedIn | [add your LinkedIn profile link] |
+| 🐙 GitHub | [] |
+| 💼 LinkedIn | [] |
 
 ---
 
 # ⭐ Acknowledgements
 
-This project was developed as part of the **SmartBridge / Skill Wallet AI & Machine Learning Virtual Internship Program** to demonstrate the practical application of **Machine Learning** and **Flask** in solving real-world agricultural crop recommendation problems.
+This project was developed as part of the **SmartBridge AI & Machine Learning Virtual Internship Program** to demonstrate the practical application of **Machine Learning** and **Flask** in solving real-world agricultural crop recommendation problems.
 
 ### Special Thanks
 

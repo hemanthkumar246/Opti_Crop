@@ -393,8 +393,8 @@ http://127.0.0.1:5000
 
 | Platform | Profile |
 |----------|---------|
-| 🐙 GitHub | [] |
-| 💼 LinkedIn | [] |
+| 🐙 GitHub | [https://github.com/hemanthkumar246/Opti_Crop] |
+| 💼 LinkedIn | [https://www.linkedin.com/in/hemanth-kumar-50240b2b6?utm_source=share_via&utm_content=profile&utm_medium=member_android] |
 
 ---
 
